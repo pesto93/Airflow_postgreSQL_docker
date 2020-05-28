@@ -1,0 +1,10 @@
+__pycache__/
+__pycache__/*
+logs/
+.DS_Store
+*.cpython-37.pyc
+*.cpython-36.pyc
+**/.vscode/
+.idea
+.idea/
+*.idea/

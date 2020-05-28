@@ -1,0 +1,20 @@
+version: "3"
+services:
+  comps_etl:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - PGHOST=localhost
+      - PGPORT=5432
+      - PGUSER=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres
+    healthcheck:
+      test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]",
+             "CMD-SHELL", "[ -f /usr/local/airflow/airflow-scheduler.pid ]"
+      ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
