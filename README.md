@@ -6,12 +6,6 @@ In order to run the Airflow pipeline locally using docker, the following environ
 3. ```PGPORT``` - Postgres Port
 4. ```PGUSER``` - Postgres Username
 5. ```PGPASSWORD``` - Postgres Password
-6. ```AURORAPASSWORD``` - Aurora Password
-7. ```AURORAUSER``` - Aurora username
-8. ```AURORADATABASE``` - Aurora database
-9. ```AURORAHOST``` - The URL of the AuroraDB
-10. ```ADUSER``` - AD name + domain name (i.e -> user@ad.geophy.com) 
-11. ```ADPASSWORD``` - AD Password
 
 I've personally modified the `sql_alchemy_conn =` variable in ```airflow.cfg``` file  from sqlite-usage to PostgreSQL.
 You can modify the ```airflow.cfg``` file to your taste, but will highly suggest not to touch it 
