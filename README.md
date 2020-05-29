@@ -1,4 +1,4 @@
-#Apache airflow Dockerfile (Build Docker Container)
+# Apache airflow Dockerfile (Build Docker Container)
 ## Usage
 In order to run the Airflow pipeline locally using docker, the following environment variables need to be set:
 1. ```DB``` - Set DB to which database you wish to use in the docker-compose.yml
@@ -6,6 +6,7 @@ In order to run the Airflow pipeline locally using docker, the following environ
 3. ```PGPORT``` - Postgres Port
 4. ```PGUSER``` - Postgres Username
 5. ```PGPASSWORD``` - Postgres Password
+
 
 I've personally modified the `sql_alchemy_conn =` variable in ```airflow.cfg``` file  from sqlite-usage to PostgreSQL.
 You can modify the ```airflow.cfg``` file to your taste, but will highly suggest not to touch it 

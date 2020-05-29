@@ -1,5 +1,7 @@
 version: "3"
 services:
+  # uncomment comps_etl if you need initdb at first run when you pull the repository
+  # currently dumping airflow tables on cmbs db -> point to a different db if need be :)
   comps_etl:
     build: .
     restart: always
@@ -18,3 +20,17 @@ services:
       interval: 30s
       timeout: 30s
       retries: 3
+
+# use if you have this environmental variable defined on your local machine.
+#environment:
+#      - PGHOST
+#      - PGPORT
+#      - PGUSER
+#      - PGDATABASE
+#      - PGPASSWORD
+#      - AURORAPASSWORD
+#      - AURORAUSER
+#      - AURORADATABASE
+#      - AURORAHOST
+#      - ADUSER
+#      - ADPASSWORD
