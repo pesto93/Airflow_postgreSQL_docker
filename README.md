@@ -1,4 +1,6 @@
 # Apache airflow Dockerfile (Build Docker Container)
+[![CI status](https://github.com/pesto93/Airflow_postgreSQL_docker/workflows/Docker/badge.svg?branch=master)]
+
 ## Usage
 In order to run the Airflow pipeline locally using docker, the following environment variables need to be set:
 1. ```DB``` - Set DB to which database you wish to use in the docker-compose.yml
